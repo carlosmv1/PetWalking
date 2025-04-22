@@ -1,0 +1,69 @@
+<!-- Main -->
+<div class="flex-1 flex flex-col">
+  <!-- Navbar -->
+  <header
+    class="bg-white shadow-md px-6 py-4 flex items-center justify-between"
+  >
+    <h2 class="text-xl font-semibold">Dashboard</h2>
+    <div class="flex items-center gap-4">
+      <span class="text-gray-600">Admin</span>
+      <img
+        src="https://i.pravatar.cc/40"
+        alt="Avatar"
+        class="rounded-full w-10 h-10"
+      />
+    </div>
+  </header>
+
+  <!-- Content -->
+  <main class="p-6 space-y-6">
+    <!-- Cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-white p-4 rounded shadow">
+        <h3 class="text-sm text-gray-500">Total Pets</h3>
+        <p class="text-2xl font-bold">124</p>
+      </div>
+      <div class="bg-white p-4 rounded shadow">
+        <h3 class="text-sm text-gray-500">Active Walkers</h3>
+        <p class="text-2xl font-bold">12</p>
+      </div>
+      <div class="bg-white p-4 rounded shadow">
+        <h3 class="text-sm text-gray-500">Bookings Today</h3>
+        <p class="text-2xl font-bold">18</p>
+      </div>
+      <div class="bg-white p-4 rounded shadow">
+        <h3 class="text-sm text-gray-500">Completed Walks</h3>
+        <p class="text-2xl font-bold">345</p>
+      </div>
+    </div>
+
+    <!-- Section: Upcoming Walks -->
+    <div class="bg-white p-6 rounded shadow">
+      <h3 class="text-lg font-semibold mb-4">Upcoming Walks</h3>
+      <table class="min-w-full text-sm">
+        <thead class="bg-gray-50 text-gray-600">
+          <tr>
+            <th class="py-2 px-4 text-left">Pet</th>
+            <th class="py-2 px-4 text-left">Walker</th>
+            <th class="py-2 px-4 text-left">Time</th>
+            <th class="py-2 px-4 text-left">Zone</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-t">
+            <td class="py-2 px-4">Max</td>
+            <td class="py-2 px-4">Ana Torres</td>
+            <td class="py-2 px-4">10:00 AM</td>
+            <td class="py-2 px-4">North Zone</td>
+          </tr>
+          <tr class="border-t">
+            <td class="py-2 px-4">Luna</td>
+            <td class="py-2 px-4">Carlos Ríos</td>
+            <td class="py-2 px-4">11:30 AM</td>
+            <td class="py-2 px-4">South Zone</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</div>

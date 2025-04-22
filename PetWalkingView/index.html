@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>HappyPaws</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/output.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="font-sans text-black bg-[#f8f8f8]">
+    <!-- Header -->
+    <header
+      class="sticky top-0 z-50 bg-[#f9f9f9] shadow flex justify-between items-center px-6 py-4"
+    >
+      <a href="#top">
+        <img src="assets/logo.png" alt="HappyPaws Logo" class="h-10" />
+      </a>
+      <nav class="space-x-6">
+        <a
+          href="#services"
+          class="text-black hover:text-[#167bbb] transition-colors"
+          >Services</a
+        >
+        <a
+          href="#about"
+          class="text-black hover:text-[#167bbb] transition-colors"
+          >About Us</a
+        >
+        <a
+          href="#contact"
+          class="text-black hover:text-[#167bbb] transition-colors"
+          >Contact</a
+        >
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative w-full overflow-hidden">
+      <div class="flex animate-slide">
+        <img
+          src="assets/mascota1.jpg"
+          alt="Mascota 1"
+          class="w-full object-cover"
+        />
+        <img
+          src="assets/mascota2.jpg"
+          alt="Mascota 2"
+          class="w-full object-cover"
+        />
+        <img
+          src="assets/mascota3.jpg"
+          alt="Mascota 3"
+          class="w-full object-cover"
+        />
+      </div>
+      <div
+        class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white text-center p-6"
+      >
+        <h1 class="text-3xl md:text-5xl font-bold mb-4">
+          Wellcome to HappyPaws
+        </h1>
+        <p class="text-lg mb-6">
+          "All your pets, schedules, bookings, and walkers—managed in one easy
+          place.
+        </p>
+        <a
+          href="pages/login.html"
+          class="inline-block btn-primary text-white font-semibold px-6 py-3 rounded-md shadow hover:bg-gray-200 hover:text-[#167bbb] transition-colors"
+          >Login</a
+        >
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-12 px-4">
+      <h2 class="text-3xl font-bold text-center mb-10">Our Services</h2>
+      <div class="grid gap-6 grid-cols-1 md:grid-cols-3">
+        <div class="bg-white rounded-lg shadow p-6 text-center">
+          <h3 class="text-xl font-semibold mb-2">Relaxing Walks</h3>
+          <p class="mb-4">
+            We offer peaceful outdoor walks so your pet can release energy,
+            connect with nature, and return home happy and relaxed.
+          </p>
+          <img
+            src="assets/paseo-desestresante.jpg"
+            alt="Relaxing Walk"
+            class="mx-auto rounded"
+          />
+        </div>
+        <div class="bg-white rounded-lg shadow p-6 text-center">
+          <h3 class="text-xl font-semibold mb-2">Energy-Burning Walks</h3>
+          <p class="mb-4">
+            Perfect for high-energy dogs: active walks that help release excess
+            energy, improve behavior, and keep them in great shape.
+          </p>
+          <img
+            src="assets/paseo-energia.jpg"
+            alt="Energy-burning walk"
+            class="mx-auto rounded"
+          />
+        </div>
+        <div class="bg-white rounded-lg shadow p-6 text-center">
+          <h3 class="text-xl font-semibold mb-2">Socializing Walks</h3>
+          <p class="mb-4">
+            We organize group walks where pets can socialize, interact with
+            other dogs, and strengthen their bond with fellow furry friends.
+          </p>
+          <img
+            src="assets/paseo-confraternizacion.jpg"
+            alt="Socializing walk"
+            class="mx-auto rounded"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="about" class="bg-gray-100 py-12 px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">About Us</h2>
+      <div class="max-w-4xl mx-auto text-center mb-12">
+        <p>
+          At <strong>HappyPaws</strong>, we're passionate about the well-being
+          of your furry friends. We’re a dedicated team of professional pet
+          walkers who genuinely love animals. Our mission is to provide a safe,
+          fun, and enriching experience for every pet we care for. Whether it’s
+          a quick stroll or a long adventure, we make sure your companion enjoys
+          every step of the journey—while you enjoy peace of mind.
+        </p>
+      </div>
+      <div class="grid gap-6 grid-cols-1 md:grid-cols-3">
+        <div class="bg-white rounded-lg shadow p-6 text-center">
+          <h3 class="text-xl font-semibold mb-2">Laura M.</h3>
+          <p class="mb-4">
+            "Passionate about animals and with 3 years of experience, Laura
+            ensures safe and loving walks for every pet.
+          </p>
+          <img
+            src="assets/paseadora1.jpg"
+            alt="General Cleaning"
+            class="mx-auto rounded"
+          />
+        </div>
+        <div class="bg-white rounded-lg shadow p-6 text-center">
+          <h3 class="text-xl font-semibold mb-2">Carlos R.</h3>
+          <p class="mb-4">
+            Deeply connected to both nature and dogs, Carlos specializes in
+            energetic walks to help pets burn off energy.
+          </p>
+          <img
+            src="assets/paseador2.jpg"
+            alt="Deep Cleaning"
+            class="mx-auto rounded"
+          />
+        </div>
+        <div class="bg-white rounded-lg shadow p-6 text-center">
+          <h3 class="text-xl font-semibold mb-2">Andrea V.</h3>
+          <p class="mb-4">
+            Caring, reliable, and an animal lover at heart. Andrea makes sure
+            your pet returns home happy and relaxed.
+          </p>
+          <img
+            src="assets/paseadora3.jpg"
+            alt="Move Out Cleaning"
+            class="mx-auto rounded"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-12 px-4">
+      <div class="max-w-6xl mx-auto grid gap-8 md:grid-cols-2">
+        <div>
+          <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
+          <p class="mb-6 text-gray-600">
+            Any questions or remarks? Just write us a message!
+          </p>
+
+          <div class="mb-4">
+            <h3 class="font-semibold">Sydney</h3>
+            <p>45 Pirrama Rd, Pyrmont NSW 2022</p>
+          </div>
+
+          <div class="mb-4">
+            <h3 class="font-semibold">Melbourne</h3>
+            <p>163 Collins St, Melbourne VIC 3000</p>
+          </div>
+
+          <div class="mb-4">
+            <h3 class="font-semibold">Los Angeles</h3>
+            <p>340 Main St, Venice CA 902291, USA</p>
+          </div>
+
+          <p class="text-sm text-gray-500">
+            Image from
+            <a
+              href="https://www.freepik.com/"
+              target="_blank"
+              class="text-[#167bbb] hover:underline"
+              >Freepik</a
+            >
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold mb-4">Get in Touch</h2>
+          <p class="mb-6">
+            Have an inquiry or some feedback for us? Fill out the form below to
+            contact our team.
+          </p>
+          <form id="contactForm" class="space-y-4">
+            <div>
+              <label for="name" class="block font-medium mb-1">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="w-full border border-gray-300 p-2 rounded"
+                placeholder="Enter your Name"
+                required
+              />
+            </div>
+            <div>
+              <label for="email" class="block font-medium mb-1">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="w-full border border-gray-300 p-2 rounded"
+                placeholder="Enter a valid email address"
+                required
+              />
+            </div>
+            <div>
+              <label for="message" class="block font-medium mb-1"
+                >How can we help?</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                class="w-full border border-gray-300 p-2 rounded"
+                placeholder="Your message here..."
+                required
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="btn-primary text-white px-4 py-2 rounded hover:bg-gray-300 hover:text-[#167bbb] transition-colors"
+            >
+              Submit
+            </button>
+            <p
+              id="contactStatus"
+              class="text-sm font-semibold mt-2 opacity-0 transition-opacity duration-500"
+            ></p>
+          </form>
+        </div>
+      </div>
+    </section>
+    <script src="../scripts/pages/contact.js"></script>
+
+    <!-- Footer -->
+    <footer class="text-center bg-gray-200 py-4 text-sm text-gray-700">
+      &copy; 2025 Paseo Mascotas - Todos los derechos reservados.
+    </footer>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

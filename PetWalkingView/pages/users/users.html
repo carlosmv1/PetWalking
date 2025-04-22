@@ -1,0 +1,113 @@
+<div>
+  <div class="flex justify-between mb-4">
+    <h2 class="text-xl font-semibold">Users</h2>
+    <a
+      href="#"
+      onclick="loadContent('users/create-user')"
+      class="btn-primary text-white px-4 py-2 rounded hover:opacity-90"
+      >+ Add User</a
+    >
+  </div>
+
+  <!-- Filtros de búsqueda -->
+  <div class="bg-gray-50 border border-gray-200 p-4 rounded mb-6">
+    <h3 class="text-lg font-semibold mb-4 text-gray-700">Search Filters</h3>
+    <form class="grid grid-cols-1 md:grid-cols-4 gap-4 items-end">
+      <div>
+        <label for="searchName" class="block text-sm font-medium text-gray-600"
+          >Name</label
+        >
+        <input
+          id="searchName"
+          type="text"
+          placeholder="Search by name"
+          class="w-full border rounded p-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+      </div>
+
+      <div>
+        <label
+          for="searchUsername"
+          class="block text-sm font-medium text-gray-600"
+          >Username</label
+        >
+        <input
+          id="searchUsername"
+          type="text"
+          placeholder="Search by username"
+          class="w-full border rounded p-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+      </div>
+
+      <div>
+        <label for="userType" class="block text-sm font-medium text-gray-600"
+          >Type</label
+        >
+        <select
+          id="userType"
+          class="w-full border rounded p-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
+          <option value="">All Types</option>
+          <option value="Admin">Admin</option>
+          <option value="Owner">Owner</option>
+          <option value="Walker">Walker</option>
+        </select>
+      </div>
+      <div>
+        <label
+          for="searchStatus"
+          class="block text-sm font-medium text-gray-600"
+          >Status</label
+        >
+        <select
+          id="searchStatus"
+          class="w-full border rounded p-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#167bbb]"
+        >
+          <option value="">All</option>
+          <option value="A">Active</option>
+          <option value="I">Inactive</option>
+        </select>
+      </div>
+      <div>
+        <button
+          id="searchBtn"
+          type="button"
+          class="btn-primary text-white px-4 py-2 rounded hover:opacity-90"
+        >
+          Search
+        </button>
+      </div>
+    </form>
+  </div>
+  <!-- Formulario -->
+  <table class="w-full text-sm border">
+    <thead class="bg-gray-100">
+      <tr>
+        <th class="p-2 text-left">Username</th>
+        <th class="p-2 text-left">Type</th>
+        <th class="p-2 text-left">Zone</th>
+        <th class="p-2 text-left">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-t">
+        <td class="p-2">johndoe</td>
+        <td class="p-2">Walker</td>
+        <td class="p-2">South</td>
+        <td class="px-4 py-2">
+          <button
+            onclick="loadContent('users/edit-user')"
+            class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 text-sm mr-2"
+          >
+            Edit
+          </button>
+          <button
+            class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 text-sm"
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

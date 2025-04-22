@@ -1,0 +1,138 @@
+<div class="max-w-3xl mx-auto">
+  <h2 class="text-2xl font-bold mb-6">Add New Pet</h2>
+
+  <form
+    id="createPetForm"
+    class="grid grid-cols-1 md:grid-cols-2 gap-6"
+    enctype="multipart/form-data"
+  >
+    <input type="hidden" id="user_id" name="user_id" />
+
+    <div class="flex items-center space-x-4 mb-6">
+      <!-- Avatar de mascota (actual o por defecto) -->
+      <img
+        id="petPreview"
+        src="https://cdn-icons-png.flaticon.com/512/616/616408.png"
+        alt="Pet Image"
+        class="w-20 h-20 rounded-full object-cover border border-gray-300"
+      />
+
+      <!-- Botón de carga -->
+      <label
+        for="petImage"
+        class="cursor-pointer bg-white border border-gray-300 px-4 py-2 rounded hover:bg-gray-100 flex items-center space-x-2"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-5 h-5 text-gray-600"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M15 12H9m0 0H5m4 0h4m4 0h4M9 12v4m0-4V8m0 4h4"
+          />
+        </svg>
+        <span>Upload Photo</span>
+        <input
+          type="file"
+          name="image"
+          id="petImage"
+          accept="image/*"
+          class="hidden"
+          onchange="previewPetImage(event)"
+        />
+      </label>
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium">Pet Name</label>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        required
+        class="w-full p-2 border rounded"
+      />
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium">Gender</label>
+      <select
+        name="gender"
+        id="gender"
+        required
+        class="w-full p-2 border rounded"
+      >
+        <option value="">Select</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium">Type</label>
+      <select
+        name="pet_type_id"
+        id="pet_type_id"
+        required
+        class="w-full p-2 border rounded"
+      >
+        <option value="">Select Type</option>
+        <option value="1">Dog</option>
+        <option value="2">Cat</option>
+      </select>
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium">Breed</label>
+      <select
+        name="pet_breed_id"
+        id="pet_breed_id"
+        required
+        class="w-full p-2 border rounded"
+      >
+        <option value="">Select Breed</option>
+        <option value="1">Labrador</option>
+        <option value="2">Persian</option>
+      </select>
+    </div>
+
+    <div class="md:col-span-2">
+      <label class="block text-sm font-medium">Observations</label>
+      <textarea
+        name="observations"
+        id="observations"
+        rows="4"
+        class="w-full p-2 border rounded"
+      ></textarea>
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium">Status</label>
+      <select
+        name="status"
+        id="status"
+        required
+        class="w-full p-2 border rounded"
+      >
+        <option value="A">Active</option>
+        <option value="I">Inactive</option>
+      </select>
+    </div>
+
+    <div class="md:col-span-2">
+      <button
+        type="submit"
+        class="btn-primary text-white px-4 py-2 rounded hover:opacity-90"
+      >
+        Create pet
+      </button>
+    </div>
+  </form>
+</div>
+
+<script src="../scripts/pages/clients/create-pet.js"></script>

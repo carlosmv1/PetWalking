@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/output.css" />
+    <title>HappyPaws Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 flex font-sans">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-white shadow-md h-screen sticky top-0">
+      <div class="p-6 border-b">
+        <img src="assets/logo.png" alt="HappyPaws Logo" class="h-10" />
+      </div>
+      <nav class="p-6 space-y-3">
+        <button
+          onclick="loadContent('data')"
+          class="block text-gray-700 hover:text-blue-600"
+        >
+          Dashboard
+        </button>
+        <button
+          onclick="loadContent('users/users')"
+          class="block text-gray-700 hover:text-blue-600"
+        >
+          Users
+        </button>
+        <button
+          onclick="loadContent('clients/clients')"
+          class="block text-gray-700 hover:text-blue-600"
+        >
+          Clients
+        </button>
+        <button
+          onclick="loadContent('bookings')"
+          class="block text-gray-700 hover:text-blue-600"
+        >
+          Bookings
+        </button>
+        <button
+          onclick="loadContent('walkers/walkers')"
+          class="block text-gray-700 hover:text-blue-600"
+        >
+          Walkers
+        </button>
+      </nav>
+    </aside>
+
+    <!-- Main content -->
+    <main class="flex-1 p-6">
+      <div id="content" class="bg-white rounded shadow p-4">
+        <!-- Aquí se cargará contenido dinámico -->
+        <p class="text-gray-500">Loading...</p>
+      </div>
+    </main>
+
+    <script src="scripts/loader.js"></script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+# Node modules
+node_modules/
+
+# Build outputs
+dist/
+build/
+*.css.map
+
+# Tailwind
+*.log
+
+# Env files
+.env
+.env.local
+.env.*.local
+
+# Editor configs
+.vscode/
+.idea/
+.DS_Store
+
+# System files
+Thumbs.db

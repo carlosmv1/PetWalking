@@ -1,0 +1,128 @@
+<div class="max-w-3xl mx-auto bg-white p-6 rounded shadow">
+  <h2 class="text-2xl font-bold mb-6">Edit Pet</h2>
+
+  <!-- Imagen de perfil -->
+  <div class="flex items-center space-x-4 mb-6">
+    <img
+      id="petPreview"
+      src="https://cdn-icons-png.flaticon.com/512/616/616408.png"
+      alt="Pet Image"
+      class="w-20 h-20 rounded-full object-cover border border-gray-300"
+    />
+
+    <label
+      for="petImage"
+      class="cursor-pointer bg-white border border-gray-300 px-4 py-2 rounded hover:bg-gray-100 flex items-center space-x-2"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="w-5 h-5 text-gray-600"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M15 12H9m0 0H5m4 0h4m4 0h4M9 12v4m0-4V8m0 4h4"
+        />
+      </svg>
+      <span>Change Photo</span>
+      <input
+        type="file"
+        name="image"
+        id="petImage"
+        accept="image/*"
+        class="hidden"
+        onchange="previewPetImage(event)"
+      />
+    </label>
+  </div>
+
+  <form id="editPetForm" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <input type="hidden" id="pet_id" name="pet_id" />
+    <input type="hidden" id="client_id" name="client_id" />
+
+    <div>
+      <label class="block text-sm font-medium">Name</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        class="w-full border rounded p-2"
+        required
+      />
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium">Gender</label>
+      <select
+        id="gender"
+        name="gender"
+        class="w-full border rounded p-2"
+        required
+      >
+        <option value="">Select</option>
+        <option value="M">Male</option>
+        <option value="F">Female</option>
+      </select>
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium">Type</label>
+      <select
+        id="pet_type_id"
+        name="pet_type_id"
+        class="w-full border rounded p-2"
+        required
+      >
+        <option value="">Select type</option>
+        <!-- JS llenará dinámicamente -->
+      </select>
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium">Breed</label>
+      <select
+        id="pet_breed_id"
+        name="pet_breed_id"
+        class="w-full border rounded p-2"
+        required
+      >
+        <option value="">Select breed</option>
+        <!-- JS llenará dinámicamente -->
+      </select>
+    </div>
+
+    <div class="md:col-span-2">
+      <label class="block text-sm font-medium">Observations</label>
+      <textarea
+        id="observations"
+        name="observations"
+        rows="3"
+        class="w-full border rounded p-2"
+      ></textarea>
+    </div>
+
+    <div class="md:col-span-2">
+      <label class="block text-sm font-medium">Status</label>
+      <select id="status" name="status" class="w-full border rounded p-2">
+        <option value="">Select</option>
+        <option value="A">Active</option>
+        <option value="I">Inactive</option>
+      </select>
+    </div>
+
+    <div class="md:col-span-2">
+      <button
+        type="submit"
+        class="btn-primary text-white px-4 py-2 rounded hover:opacity-90"
+      >
+        Update Pet
+      </button>
+    </div>
+  </form>
+</div>
+
+<script src="../scripts/pages/clients/edit-pet.js"></script>

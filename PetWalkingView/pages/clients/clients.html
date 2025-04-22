@@ -1,0 +1,80 @@
+<div>
+  <div class="flex justify-between mb-4">
+    <h2 class="text-2xl font-semibold">Clients</h2>
+  </div>
+
+  <!-- Search Filters -->
+  <div class="bg-gray-50 border border-gray-200 p-4 rounded mb-6">
+    <h3 class="text-lg font-semibold mb-4 text-gray-700">Search Filters</h3>
+    <form class="grid grid-cols-1 md:grid-cols-4 gap-4 items-end">
+      <div>
+        <label for="searchName" class="block text-sm font-medium text-gray-600"
+          >Name</label
+        >
+        <input
+          id="searchName"
+          type="text"
+          placeholder="Search by name"
+          class="w-full border rounded p-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#167bbb]"
+        />
+      </div>
+
+      <div>
+        <label
+          for="searchUsername"
+          class="block text-sm font-medium text-gray-600"
+          >Username</label
+        >
+        <input
+          id="searchUsername"
+          type="text"
+          placeholder="Search by username"
+          class="w-full border rounded p-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#167bbb]"
+        />
+      </div>
+
+      <div>
+        <label
+          for="searchStatus"
+          class="block text-sm font-medium text-gray-600"
+          >Status</label
+        >
+        <select
+          id="searchStatus"
+          class="w-full border rounded p-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#167bbb]"
+        >
+          <option value="">All</option>
+          <option value="A">Active</option>
+          <option value="I">Inactive</option>
+        </select>
+      </div>
+
+      <div>
+        <button
+          id="searchBtn"
+          type="button"
+          class="btn-primary text-white px-4 py-2 rounded text-sm hover:opacity-90 w-full"
+        >
+          Search
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Tabla de clientes -->
+  <table class="min-w-full bg-white text-sm border rounded">
+    <thead class="bg-gray-100 text-left">
+      <tr>
+        <th class="px-4 py-2">Name</th>
+        <th class="px-4 py-2">Username</th>
+        <th class="px-4 py-2">Email</th>
+        <th class="px-4 py-2">Actions</th>
+      </tr>
+    </thead>
+    <tbody id="clientTableBody">
+      <!-- JS insertará aquí las filas -->
+    </tbody>
+  </table>
+</div>
+
+<script src="../scripts/pages/clients/clients.js"></script>

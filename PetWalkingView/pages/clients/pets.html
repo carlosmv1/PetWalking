@@ -1,0 +1,32 @@
+<div>
+  <h2 class="text-2xl font-bold mb-4">
+    Pets of Client <span id="petClientId"></span>
+  </h2>
+
+  <!-- Botón Agregar Mascota -->
+  <div class="mb-4">
+    <button
+      onclick="loadContent('clients/create-pet?id=1')"
+      class="btn-primary text-white px-4 py-2 rounded hover:opacity-90"
+    >
+      + Add Pet
+    </button>
+  </div>
+
+  <!-- Tabla de mascotas -->
+  <table class="min-w-full bg-white text-sm border rounded">
+    <thead class="bg-gray-100 text-left">
+      <tr>
+        <th class="px-4 py-2">Name</th>
+        <th class="px-4 py-2">Breed</th>
+        <th class="px-4 py-2">Age</th>
+        <th class="px-4 py-2">Actions</th>
+      </tr>
+    </thead>
+    <tbody id="petTableBody">
+      <!-- Se cargan dinámicamente -->
+    </tbody>
+  </table>
+</div>
+
+<script src="../scripts/pages/clients/pets.js"></script>

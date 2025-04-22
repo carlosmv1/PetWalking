@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create User</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 p-6 font-sans">
+    <div class="max-w-3xl mx-auto bg-white p-6 rounded shadow">
+      <h2 class="text-2xl font-bold mb-6">Create New User</h2>
+
+      <form
+        id="userForm"
+        class="grid grid-cols-1 md:grid-cols-2 gap-6"
+        enctype="multipart/form-data"
+        method="post"
+      >
+        <div class="flex items-center space-x-4 mb-6">
+          <!-- Avatar actual o por defecto -->
+          <img
+            id="profilePreview"
+            src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
+            alt="Profile Image"
+            class="w-20 h-20 rounded-full object-cover border border-gray-300"
+          />
+
+          <!-- Botón de subir imagen -->
+          <label
+            class="cursor-pointer bg-white border border-gray-300 px-4 py-2 rounded hover:bg-gray-100 flex items-center space-x-2"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-5 h-5 text-gray-600"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 12H9m0 0H5m4 0h4m4 0h4M9 12v4m0-4V8m0 4h4"
+              />
+            </svg>
+            <span>Upload</span>
+            <input
+              type="file"
+              name="image"
+              id="image"
+              accept="image/*"
+              class="hidden"
+              onchange="previewImage(event)"
+            />
+          </label>
+        </div>
+
+        <!-- Username -->
+        <div>
+          <label class="block text-sm font-medium">Username</label>
+          <input
+            type="text"
+            name="user_name"
+            required
+            class="w-full border rounded p-2"
+          />
+        </div>
+
+        <!-- Password -->
+        <div>
+          <label class="block text-sm font-medium">Password</label>
+          <input
+            type="password"
+            name="password"
+            required
+            class="w-full border rounded p-2"
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$"
+            title="Must contain at least 8 characters, one uppercase, one lowercase, one number, and one special character."
+          />
+        </div>
+
+        <!-- First Name -->
+        <div>
+          <label class="block text-sm font-medium">First Name</label>
+          <input
+            type="text"
+            name="first_name"
+            class="w-full border rounded p-2"
+          />
+        </div>
+
+        <!-- Last Name -->
+        <div>
+          <label class="block text-sm font-medium">Last Name</label>
+          <input
+            type="text"
+            name="last_name"
+            class="w-full border rounded p-2"
+          />
+        </div>
+
+        <!-- City -->
+        <div>
+          <label class="block text-sm font-medium">City</label>
+          <input type="text" name="city" class="w-full border rounded p-2" />
+        </div>
+
+        <!-- Zone -->
+        <div>
+          <label class="block text-sm font-medium">Zone</label>
+          <select name="zone_id" required class="w-full border rounded p-2">
+            <option value="">Select</option>
+            <option value="1">North</option>
+            <option value="2">South</option>
+            <option value="3">Central</option>
+          </select>
+        </div>
+
+        <!-- Address -->
+        <div class="md:col-span-2">
+          <label class="block text-sm font-medium">Address</label>
+          <input type="text" name="address" class="w-full border rounded p-2" />
+        </div>
+
+        <!-- Phone -->
+        <div>
+          <label class="block text-sm font-medium">Phone</label>
+          <input
+            type="text"
+            name="phone"
+            pattern="\d+"
+            title="Only numbers"
+            class="w-full border rounded p-2"
+          />
+        </div>
+
+        <!-- Alt Phone -->
+        <div>
+          <label class="block text-sm font-medium">Alt Phone</label>
+          <input
+            type="text"
+            name="alt_phone"
+            pattern="\d+"
+            title="Only numbers"
+            class="w-full border rounded p-2"
+          />
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label class="block text-sm font-medium">Email</label>
+          <input
+            type="email"
+            name="email"
+            required
+            class="w-full border rounded p-2"
+          />
+        </div>
+
+        <!-- User Type -->
+        <div>
+          <label class="block text-sm font-medium">User Type</label>
+          <select
+            name="user_type_id"
+            required
+            class="w-full border rounded p-2"
+          >
+            <option value="">Select</option>
+            <option value="1">Admin</option>
+            <option value="2">Pet Owner</option>
+            <option value="3">Walker</option>
+            <!-- puedes cargar dinámicamente desde tu backend -->
+          </select>
+        </div>
+
+        <!-- Submit -->
+        <div class="md:col-span-2">
+          <button
+            type="submit"
+            class="btn-primary text-white px-4 py-2 rounded hover:opacity-90"
+          >
+            Create User
+          </button>
+        </div>
+      </form>
+    </div>
+    <script src="../scripts/pages/create-user.js"></script>
+  </body>
+</html>

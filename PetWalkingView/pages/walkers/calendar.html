@@ -1,0 +1,28 @@
+<div class="p-6">
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="text-2xl font-bold">April 2025 / W3</h2>
+      <div class="space-x-2">
+        <button class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-900 text-sm">Today</button>
+        <button class="bg-[#167bbb] text-white px-4 py-2 rounded hover:opacity-90 text-sm">New Event</button>
+      </div>
+    </div>
+  
+    <div class="grid grid-cols-[80px_repeat(7,1fr)] border border-gray-200 rounded overflow-hidden text-sm">
+      <!-- Hora lateral -->
+      <div class="bg-gray-100 border-r border-gray-200">
+        <div class="h-12 flex items-end justify-center">6 AM</div>
+        <div class="h-12 flex items-end justify-center">7 AM</div>
+        <div class="h-12 flex items-end justify-center">8 AM</div>
+        <div class="h-12 flex items-end justify-center">9 AM</div>
+        <div class="h-12 flex items-end justify-center">10 AM</div>
+        <div class="h-12 flex items-end justify-center">11 AM</div>
+        <div class="h-12 flex items-end justify-center">12 PM</div>
+      </div>
+  
+      <!-- Días (Lun - Dom) -->
+      <div id="calendarDays" class="col-span-7 grid grid-cols-7">
+        <!-- columnas por día se insertan dinámicamente aquí -->
+      </div>
+    </div>
+  </div>
+  
